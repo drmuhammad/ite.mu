@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد محمود - مهندس تقانة المعلومات | ite.mu</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#7c3aed',
+                        accent: '#ec4899',
+                        bgLight: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        /* Enhanced Animated Background */
+        .animated-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #ec4899 100%);
+            background-size: 200% 200%;
+            animation: gradientFlow 15s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: bgMove 25s linear infinite;
+        }
+        
+        @keyframes bgMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+        
+        /* Floating Particles Enhanced */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: floatParticle 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes floatParticle {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+            25% { transform: translate(30px, -30px) scale(1.2); opacity: 0.8; }
+            50% { transform: translate(-20px, -60px) scale(0.9); opacity: 1; }
+            75% { transform: translate(-40px, -30px) scale(1.1); opacity: 0.7; }
+        }
+        
+        /* Gradient Text Enhanced */
+        .gradient-text {
+            background: linear-gradient(135deg, #ec4899 0%, #7c3aed 50%, #1e3a8a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease infinite;
+            background-size: 300% 300%;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        /* Avatar Animation Enhanced */
+        .avatar-container {
+            position: relative;
+            animation: avatarFloat 4s ease-in-out infinite;
+        }
+        
+        @keyframes avatarFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .avatar-ring {
+            position: absolute;
+            border: 3px solid rgba(236, 72, 153, 0.4);
+            border-radius: 50%;
+            animation: pulseRing 2.5s ease-out infinite;
+        }
+        
+        @keyframes pulseRing {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+        
+        /* Enhanced Card 3D Effects */
+        .card-3d {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        
+        .card-3d:hover {
+            transform: translateY(-20px) rotateX(10deg) rotateY(5deg) scale(1.02);
+            box-shadow: 0 40px 80px rgba(30, 58, 138, 0.25);
+        }
+        
+        .card-3d::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(124, 58, 237, 0.15));
+            opacity: 0;
+            transition: opacity 0.5s;
+            border-radius: inherit;
+        }
+        
+        .card-3d:hover::before {
+            opacity: 1;
+        }
+        
+        /* Service Icon Enhanced */
+        .service-icon {
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .card-3d:hover .service-icon {
+            transform: scale(1.3) rotate(360deg);
+        }
+        
+        /* Progress Bar Enhanced */
+        .progress-bar {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: shimmer 2.5s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        /* Typing Effect Enhanced */
+        .typing-text {
+            display: inline-block;
+        }
+        
+        .typing-text::after {
+            content: '|';
+            animation: blink 1s infinite;
+            font-weight: bold;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        /* Nav Link Enhanced */
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ec4899, #7c3aed, #1e3a8a);
+            transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Button Enhanced */
+        .btn-enhanced {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .btn-enhanced:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+        
+        .btn-enhanced span {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Scroll Indicator Enhanced */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounceEnhanced 2s infinite;
+        }
+        
+        @keyframes bounceEnhanced {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-15px); }
+            60% { transform: translateX(-50%) translateY(-8px); }
+        }
+        
+        /* Form Enhanced */
+        .form-input {
+            transition: all 0.4s;
+            position: relative;
+        }
+        
+        .form-input:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+            border-color: #ec4899;
+        }
+        
+        /* Fade In Up Enhanced */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Social Icon Enhanced */
+        .social-icon {
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-8px) rotate(360deg) scale(1.15);
+        }
+        
+        /* Glow Effect Enhanced */
+        .glow {
+            animation: glowPulse 2.5s ease-in-out infinite;
+        }
+        
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.6); }
+            50% { box-shadow: 0 0 50px rgba(236, 72, 153, 1), 0 0 80px rgba(124, 58, 237, 0.8); }
+        }
+        
+        /* Mobile Menu Enhanced */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .mobile-menu.active {
+            max-height: 600px;
+        }
+        
+        /* Stats Counter Enhanced */
+        .stat-card {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(124, 58, 237, 0.1));
+            border: 2px solid transparent;
+            transition: all 0.4s;
+        }
+        
+        .stat-card:hover {
+            border-color: #ec4899;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(124, 58, 237, 0.2));
+        }
+        
+        /* Timeline Styles */
+        .timeline-item {
+            position: relative;
+            padding-right: 40px;
+            border-right: 3px solid #ec4899;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #ec4899;
+            box-shadow: 0 0 0 4px #fff, 0 0 0 8px #ec4899;
+        }
+        
+        /* Navbar Enhanced */
+        nav {
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        /* Portfolio Grid */
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.9), rgba(124, 58, 237, 0.9));
+            opacity: 0;
+            transition: opacity 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        /* Testimonial Card */
+        .testimonial-card {
+            background: linear-gradient(135deg, #fff 0%, #f8fafc 100%);
+            border: 2px solid transparent;
+            transition: all 0.4s;
+        }
+        
+        .testimonial-card:hover {
+            border-color: #ec4899;
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body class="bg-bgLight">
+    
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg z-50 transition-all">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#home" class="flex items-center transform hover:scale-105 transition">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
+                        <span class="text-white font-bold text-xl">IT</span>
+                    </div>
+                </a>
+                
+                <ul class="hidden md:flex space-x-reverse space-x-8 items-center">
+                    <li><a href="#about" class="nav-link text-primary hover:text-accent transition font-semibold">عني</a></li>
+                    <li><a href="#skills" class="nav-link text-primary hover:text-accent transition font-semibold">المهارات</a></li>
+                    <li><a href="#services" class="nav-link text-primary hover:text-accent transition font-semibold">الخدمات</a></li>
+                    <li><a href="#portfolio" class="nav-link text-primary hover:text-accent transition font-semibold">الأعمال</a></li>
+                    <li><a href="#certificates" class="nav-link text-primary hover:text-accent transition font-semibold">الشهادات</a></li>
+                    <li><a href="#contact" class="nav-link text-primary hover:text-accent transition font-semibold">تواصل</a></li>
+                </ul>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-primary text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <ul class="py-4 space-y-3">
+                    <li><a href="#about" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">عني</a></li>
+                    <li><a href="#skills" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">المهارات</a></li>
+                    <li><a href="#services" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">الخدمات</a></li>
+                    <li><a href="#portfolio" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">الأعمال</a></li>
+                    <li><a href="#certificates" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">الشهادات</a></li>
+                    <li><a href="#contact" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">تواصل</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="animated-bg min-h-screen flex items-center pt-20 relative">
+        <div class="particle" style="width: 12px; height: 12px; top: 15%; left: 10%; background: rgba(236, 72, 153, 0.4); animation-delay: 0s;"></div>
+        <div class="particle" style="width: 18px; height: 18px; top: 65%; left: 85%; background: rgba(124, 58, 237, 0.4); animation-delay: 1s;"></div>
+        <div class="particle" style="width: 10px; height: 10px; top: 35%; left: 75%; background: rgba(30, 58, 138, 0.4); animation-delay: 2s;"></div>
+        <div class="particle" style="width: 15px; height: 15px; top: 75%; left: 25%; background: rgba(236, 72, 153, 0.5); animation-delay: 3s;"></div>
+        <div class="particle" style="width: 8px; height: 8px; top: 50%; left: 15%; background: rgba(124, 58, 237, 0.5); animation-delay: 1.5s;"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="flex-1 text-white fade-in-up">
+                    <h2 class="text-xl md:text-2xl mb-4 text-accent font-semibold">مرحبًا، أنا</h2>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text drop-shadow-2xl">محمد محمود</h1>
+                    <div class="text-2xl md:text-3xl mb-8 h-12">
+                        <span id="typing-text" class="typing-text text-white font-semibold drop-shadow-lg"></span>
+                    </div>
+                    <p class="text-lg md:text-xl mb-8 leading-relaxed opacity-95 drop-shadow-lg">
+                        مهندس تقانة المعلومات متخصص في تطوير الويب وتدريب البرمجة.
+                        أساعد الأفراد والشركات على تحقيق أهدافهم التقنية من خلال حلول مبتكرة وتدريب احترافي.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="btn-enhanced bg-gradient-to-r from-accent via-secondary to-primary hover:from-accent hover:to-secondary text-white px-8 py-4 rounded-xl font-bold transition transform hover:scale-105 text-center glow shadow-2xl">
+                            <span><i class="fas fa-calendar-check ml-2"></i>احجز جلسة استشارية</span>
+                        </a>
+                        <a href="#portfolio" class="btn-enhanced bg-white/20 backdrop-blur-md border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-4 rounded-xl font-bold transition text-center shadow-xl">
+                            <span><i class="fas fa-briefcase ml-2"></i>استعرض الأعمال</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="flex-1 flex justify-center">
+                    <div class="avatar-container relative">
+                        <div class="avatar-ring" style="width: 300px; height: 300px; top: -15px; left: -15px; animation-delay: 0s;"></div>
+                        <div class="avatar-ring" style="width: 300px; height: 300px; top: -15px; left: -15px; animation-delay: 0.8s;"></div>
+                        <div class="avatar-ring" style="width: 300px; height: 300px; top: -15px; left: -15px; animation-delay: 1.6s;"></div>
+                        <div class="relative">
+                            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-accent via-secondary to-primary p-2 shadow-2xl">
+                                <div class="w-full h-full rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">
+                                    <i class="fas fa-user text-8xl text-gray-400"></i>
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 bg-gradient-to-br from-accent to-secondary text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl shadow-2xl glow">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down text-white text-2xl drop-shadow-lg"></i>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">عني</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-bgLight to-white p-8 md:p-12 rounded-3xl shadow-2xl card-3d fade-in-up border-2 border-transparent hover:border-accent/30">
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
+                        أنا محمد محمود، مهندس تقانة معلومات شغوف بالتكنولوجيا والتعليم. أمتلك خبرة واسعة في تطوير تطبيقات الويب الحديثة باستخدام أحدث التقنيات والأطر البرمجية.
+                    </p>
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
+                        تخصصي الأساسي يشمل تطوير الواجهات الأمامية والخلفية، مع تركيز خاص على تجربة المستخدم وأداء التطبيقات. أؤمن بأن الكود الجيد هو الذي يجمع بين الأداء العالي والقابلية للصيانة.
+                    </p>
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-700">
+                        بالإضافة إلى عملي كمطور، أقدم دورات تدريبية متخصصة في البرمجة لمساعدة المبتدئين والمحترفين على تطوير مهاراتهم. أعمل أيضًا كمستشار تقني للشركات الناشئة والمؤسسات الراغبة في التحول الرقمي.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                    <div class="stat-card text-center p-8 bg-white rounded-2xl shadow-lg card-3d fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="text-5xl text-accent mb-4 service-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent mb-2 counter" data-target="50">0</h3>
+                        <p class="text-gray-600 font-semibold">مشروع منجز</p>
+                    </div>
+                    
+                    <div class="stat-card text-center p-8 bg-white rounded-2xl shadow-lg card-3d fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="text-5xl text-secondary mb-4 service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent mb-2 counter" data-target="200">0</h3>
+                        <p class="text-gray-600 font-semibold">طالب مُدرَّب</p>
+                    </div>
+                    
+                    <div class="stat-card text-center p-8 bg-white rounded-2xl shadow-lg card-3d fade-in-up" style="transition-delay: 0.3s;">
+                        <div class="text-5xl text-primary mb-4 service-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2 counter" data-target="15">0</h3>
+                        <p class="text-gray-600 font-semibold">شهادة احترافية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-br from-bgLight to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">المهارات التقنية</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="fade-in-up">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-8 flex items-center">
+                            <i class="fas fa-code text-accent ml-3"></i>
+                            تطوير الواجهات الأمامية
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">HTML5 & CSS3</span>
+                                    <span class="text-accent font-bold text-lg">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-accent via-secondary to-accent h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="88"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">Tailwind CSS & Bootstrap</span>
+                                    <span class="text-primary font-bold text-lg">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-primary via-accent to-primary h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="92"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fade-in-up" style="transition-delay: 0.2s;">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-8 flex items-center">
+                            <i class="fas fa-server text-secondary ml-3"></i>
+                            تطوير الواجهات الخلفية
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">Node.js & Express</span>
+                                    <span class="text-primary font-bold text-lg">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-primary to-secondary h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="85"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">Python & Django</span>
+                                    <span class="text-secondary font-bold text-lg">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-secondary to-accent h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="80"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">MongoDB & PostgreSQL</span>
+                                    <span class="text-accent font-bold text-lg">83%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-accent to-primary h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="83"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">RESTful APIs & GraphQL</span>
+                                    <span class="text-primary font-bold text-lg">87%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-primary via-secondary to-accent h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="87"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">الخدمات المقدمة</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gradient-to-br from-bgLight to-white p-8 rounded-3xl shadow-xl card-3d fade-in-up relative overflow-hidden group border-2 border-transparent hover:border-accent/30">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-accent/10 rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="text-6xl text-accent mb-6 service-icon relative z-10">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4 relative z-10">تطوير تطبيقات الويب</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                        تصميم وتطوير تطبيقات ويب متقدمة ومتجاوبة باستخدام أحدث التقنيات والأطر البرمجية. حلول مخصصة تناسب احتياجات عملك.
+                    </p>
+                    <ul class="space-y-3 text-gray-600 relative z-10">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent ml-3"></i>واجهات مستخدم حديثة</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent ml-3"></i>تصميم متجاوب</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent ml-3"></i>أداء عالي</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-bgLight to-white p-8 rounded-3xl shadow-xl card-3d fade-in-up relative overflow-hidden group border-2 border-transparent hover:border-secondary/30" style="transition-delay: 0.1s;">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-secondary/10 rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="text-6xl text-secondary mb-6 service-icon relative z-10">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4 relative z-10">تدريب البرمجة</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                        دورات تدريبية شاملة في مختلف لغات البرمجة وتقنيات التطوير. برامج مصممة للمبتدئين والمحترفين على حد سواء.
+                    </p>
+                    <ul class="space-y-3 text-gray-600 relative z-10">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-secondary ml-3"></i>دورات مباشرة أونلاين</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-secondary ml-3"></i>مشاريع عملية</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-secondary ml-3"></i>شهادات معتمدة</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-bgLight to-white p-8 rounded-3xl shadow-xl card-3d fade-in-up relative overflow-hidden group border-2 border-transparent hover:border-primary/30" style="transition-delay: 0.2s;">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-primary/10 rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="text-6xl text-primary mb-6 service-icon relative z-10">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4 relative z-10">الاستشارات التقنية</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                        استشارات تقنية متخصصة لمساعدة الشركات والأفراد على اختيار الحلول التقنية المناسبة وتحسين البنية التحتية الرقمية.
+                    </p>
+                    <ul class="space-y-3 text-gray-600 relative z-10">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary ml-3"></i>تقييم تقني شامل</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary ml-3"></i>خطط تطوير مخصصة</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary ml-3"></i>دعم فني مستمر</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gradient-to-br from-bgLight to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">معرض الأعمال</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="portfolio-item fade-in-up card-3d bg-gradient-to-br from-accent/20 to-secondary/20 h-64">
+                    <div class="portfolio-overlay">
+                        <div class="text-white text-center p-6">
+                            <i class="fas fa-shopping-cart text-5xl mb-4"></i>
+                            <h4 class="text-2xl font-bold mb-2">متجر إلكتروني</h4>
+                            <p class="mb-4">منصة تجارة إلكترونية متكاملة</p>
+                            <button class="bg-white text-accent px-6 py-2 rounded-lg font-semibold hover:scale-105 transition">عرض المشروع</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in-up card-3d bg-gradient-to-br from-secondary/20 to-primary/20 h-64" style="transition-delay: 0.1s;">
+                    <div class="portfolio-overlay">
+                        <div class="text-white text-center p-6">
+                            <i class="fas fa-graduation-cap text-5xl mb-4"></i>
+                            <h4 class="text-2xl font-bold mb-2">منصة تعليمية</h4>
+                            <p class="mb-4">نظام إدارة التعلم الإلكتروني</p>
+                            <button class="bg-white text-secondary px-6 py-2 rounded-lg font-semibold hover:scale-105 transition">عرض المشروع</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in-up card-3d bg-gradient-to-br from-primary/20 to-accent/20 h-64" style="transition-delay: 0.2s;">
+                    <div class="portfolio-overlay">
+                        <div class="text-white text-center p-6">
+                            <i class="fas fa-hospital text-5xl mb-4"></i>
+                            <h4 class="text-2xl font-bold mb-2">نظام طبي</h4>
+                            <p class="mb-4">إدارة المستشفيات والعيادات</p>
+                            <button class="bg-white text-primary px-6 py-2 rounded-lg font-semibold hover:scale-105 transition">عرض المشروع</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in-up card-3d bg-gradient-to-br from-accent/20 to-primary/20 h-64" style="transition-delay: 0.3s;">
+                    <div class="portfolio-overlay">
+                        <div class="text-white text-center p-6">
+                            <i class="fas fa-chart-line text-5xl mb-4"></i>
+                            <h4 class="text-2xl font-bold mb-2">لوحة تحكم تحليلية</h4>
+                            <p class="mb-4">تحليل البيانات والإحصائيات</p>
+                            <button class="bg-white text-accent px-6 py-2 rounded-lg font-semibold hover:scale-105 transition">عرض المشروع</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in-up card-3d bg-gradient-to-br from-secondary/20 to-accent/20 h-64" style="transition-delay: 0.4s;">
+                    <div class="portfolio-overlay">
+                        <div class="text-white text-center p-6">
+                            <i class="fas fa-utensils text-5xl mb-4"></i>
+                            <h4 class="text-2xl font-bold mb-2">تطبيق مطاعم</h4>
+                            <p class="mb-4">نظام طلبات وحجوزات المطاعم</p>
+                            <button class="bg-white text-secondary px-6 py-2 rounded-lg font-semibold hover:scale-105 transition">عرض المشروع</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in-up card-3d bg-gradient-to-br from-primary/20 to-secondary/20 h-64" style="transition-delay: 0.5s;">
+                    <div class="portfolio-overlay">
+                        <div class="text-white text-center p-6">
+                            <i class="fas fa-mobile-alt text-5xl mb-4"></i>
+                            <h4 class="text-2xl font-bold mb-2">تطبيق جوال</h4>
+                            <p class="mb-4">تطبيق موبايل متعدد المنصات</p>
+                            <button class="bg-white text-primary px-6 py-2 rounded-lg font-semibold hover:scale-105 transition">عرض المشروع</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">الشهادات والإنجازات</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="certificate-card fade-in-up">
+                    <div class="certificate-inner bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-primary/30">
+                        <div class="bg-gradient-to-br from-primary to-secondary text-white p-10 text-center relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
+                            <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mb-16"></div>
+                            <i class="fas fa-certificate text-7xl text-accent mb-4 relative z-10 drop-shadow-lg"></i>
+                            <h4 class="text-xl font-bold relative z-10">AWS Certified Solutions Architect</h4>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 text-center font-semibold">Amazon Web Services</p>
+                            <p class="text-sm text-gray-500 text-center mt-2">2024</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="certificate-inner bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-accent/30">
+                        <div class="bg-gradient-to-br from-accent to-secondary text-white p-10 text-center relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
+                            <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mb-16"></div>
+                            <i class="fas fa-certificate text-7xl text-white mb-4 relative z-10 drop-shadow-lg"></i>
+                            <h4 class="text-xl font-bold relative z-10">Professional Web Developer</h4>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 text-center font-semibold">freeCodeCamp</p>
+                            <p class="text-sm text-gray-500 text-center mt-2">2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="certificate-inner bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-secondary/30">
+                        <div class="bg-gradient-to-br from-secondary to-primary text-white p-10 text-center relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
+                            <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mb-16"></div>
+                            <i class="fas fa-certificate text-7xl text-accent mb-4 relative z-10 drop-shadow-lg"></i>
+                            <h4 class="text-xl font-bold relative z-10">React Developer Specialist</h4>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 text-center font-semibold">Meta (Facebook)</p>
+                            <p class="text-sm text-gray-500 text-center mt-2">2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card fade-in-up">
+                    <div class="certificate-inner bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-primary/30">
+                        <div class="bg-gradient-to-br from-primary via-secondary to-accent text-white p-10 text-center relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
+                            <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mb-16"></div>
+                            <i class="fas fa-certificate text-7xl text-white mb-4 relative z-10 drop-shadow-lg"></i>
+                            <h4 class="text-xl font-bold relative z-10">Python for Data Science</h4>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 text-center font-semibold">IBM</p>
+                            <p class="text-sm text-gray-500 text-center mt-2">2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="certificate-inner bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-accent/30">
+                        <div class="bg-gradient-to-br from-accent via-primary to-secondary text-white p-10 text-center relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
+                            <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mb-16"></div>
+                            <i class="fas fa-certificate text-7xl text-white mb-4 relative z-10 drop-shadow-lg"></i>
+                            <h4 class="text-xl font-bold relative z-10">Full Stack Development</h4>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 text-center font-semibold">Coursera</p>
+                            <p class="text-sm text-gray-500 text-center mt-2">2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="certificate-card fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="certificate-inner bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-transparent hover:border-secondary/30">
+                        <div class="bg-gradient-to-br from-secondary via-accent to-primary text-white p-10 text-center relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
+                            <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-16 -mb-16"></div>
+                            <i class="fas fa-certificate text-7xl text-white mb-4 relative z-10 drop-shadow-lg"></i>
+                            <h4 class="text-xl font-bold relative z-10">UI/UX Design Professional</h4>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 text-center font-semibold">Google</p>
+                            <p class="text-sm text-gray-500 text-center mt-2">2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-bgLight to-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">تواصل معي</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="fade-in-up">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-semibold mb-2 text-lg">الاسم الكامل</label>
+                                <input type="text" id="name" required class="form-input w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-accent transition" placeholder="أدخل اسمك الكامل">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 font-semibold mb-2 text-lg">البريد الإلكتروني</label>
+                                <input type="email" id="email" required class="form-input w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-accent transition" placeholder="your@email.com">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-gray-700 font-semibold mb-2 text-lg">الموضوع</label>
+                                <input type="text" id="subject" required class="form-input w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-accent transition" placeholder="موضوع الرسالة">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-semibold mb-2 text-lg">الرسالة</label>
+                                <textarea id="message" rows="5" required class="form-input w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-accent transition resize-none" placeholder="اكتب رسالتك هنا..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-enhanced w-full bg-gradient-to-r from-accent via-secondary to-primary hover:from-accent hover:to-primary text-white px-8 py-4 rounded-xl font-bold transition transform hover:scale-105 text-lg shadow-xl glow">
+                                <span><i class="fas fa-paper-plane ml-2"></i>إرسال الرسالة</span>
+                            </button>
+                        </form>
+                        
+                        <div id="form-message" class="hidden mt-6 p-4 rounded-xl"></div>
+                    </div>
+                    
+                    <div class="fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="bg-gradient-to-br from-white to-bgLight p-8 md:p-10 rounded-3xl shadow-2xl h-full border-2 border-transparent hover:border-accent/20 transition">
+                            <h3 class="text-3xl font-bold text-primary mb-8">معلومات التواصل</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start group">
+                                    <div class="text-accent text-3xl ml-4 mt-1 group-hover:scale-110 transition">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-2 text-lg">البريد الإلكتروني</h4>
+                                        <a href="mailto:contact@ite.mu" class="text-gray-600 hover:text-accent transition text-lg">contact@ite.mu</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start group">
+                                    <div class="text-secondary text-3xl ml-4 mt-1 group-hover:scale-110 transition">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-2 text-lg">LinkedIn</h4>
+                                        <a href="https://linkedin.com/in/mohammadmahmoud" target="_blank" class="text-gray-600 hover:text-secondary transition">linkedin.com/in/mohammadmahmoud</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start group">
+                                    <div class="text-primary text-3xl ml-4 mt-1 group-hover:scale-110 transition">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-2 text-lg">GitHub</h4>
+                                        <a href="https://github.com/mohammadmahmoud" target="_blank" class="text-gray-600 hover:text-primary transition">github.com/mohammadmahmoud</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start group">
+                                    <div class="text-accent text-3xl ml-4 mt-1 group-hover:scale-110 transition">
+                                        <i class="fab fa-telegram"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-2 text-lg">Telegram</h4>
+                                        <a href="https://t.me/itemu" target="_blank" class="text-gray-600 hover:text-accent transition">@itemu</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-10 pt-8 border-t-2 border-gray-200">
+                                <h4 class="font-bold text-gray-800 mb-6 text-xl">تابعني على وسائل التواصل</h4>
+                                <div class="flex gap-4">
+                                    <a href="https://linkedin.com/in/mohammadmahmoud" target="_blank" class="social-icon w-14 h-14 bg-gradient-to-br from-primary to-secondary hover:from-accent hover:to-secondary text-white rounded-2xl flex items-center justify-center shadow-lg">
+                                        <i class="fab fa-linkedin text-2xl"></i>
+                                    </a>
+                                    <a href="https://github.com/mohammadmahmoud" target="_blank" class="social-icon w-14 h-14 bg-gradient-to-br from-secondary to-accent hover:from-primary hover:to-accent text-white rounded-2xl flex items-center justify-center shadow-lg">
+                                        <i class="fab fa-github text-2xl"></i>
+                                    </a>
+                                    <a href="https://t.me/itemu" target="_blank" class="social-icon w-14 h-14 bg-gradient-to-br from-accent to-primary hover:from-secondary hover:to-primary text-white rounded-2xl flex items-center justify-center shadow-lg">
+                                        <i class="fab fa-telegram text-2xl"></i>
+                                    </a>
+                                    <a href="https://twitter.com/mohammadmahmoud" target="_blank" class="social-icon w-14 h-14 bg-gradient-to-br from-primary to-accent hover:from-secondary hover:to-accent text-white rounded-2xl flex items-center justify-center shadow-lg">
+                                        <i class="fab fa-twitter text-2xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary via-secondary to-accent text-white py-12 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute w-64 h-64 bg-white rounded-full -top-32 -right-32 animate-pulse"></div>
+            <div class="absolute w-96 h-96 bg-white rounded-full -bottom-48 -left-48 animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-right">
+                    <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 mx-auto md:mx-0 shadow-xl">
+                        <span class="text-white font-bold text-2xl">IT</span>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <p class="text-gray-100 text-lg mb-2">
+                        &copy; 2024 محمد محمود - ite.mu
+                    </p>
+                    <p class="text-sm text-gray-200">
+                        صُمم بـ <i class="fas fa-heart text-accent mx-1 animate-pulse"></i> باستخدام التقنيات الحديثة
+                    </p>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="#home" class="text-gray-200 hover:text-white transition">الرئيسية</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="#about" class="text-gray-200 hover:text-white transition">عني</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="#contact" class="text-gray-200 hover:text-white transition">تواصل</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Typing Animation
+        const texts = ['مطور ويب محترف', 'مدرب برمجة معتمد', 'مستشار تقني', 'مهندس برمجيات'];
+        let textIndex = 0;
+        let charIndex = 0;
+        const typingSpeed = 100;
+        const erasingSpeed = 50;
+        const newTextDelay = 2000;
+        const typingTextElement = document.getElementById('typing-text');
+        
+        function type() {
+            if (charIndex < texts[textIndex].length) {
+                typingTextElement.textContent += texts[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingSpeed);
+            } else {
+                setTimeout(erase, newTextDelay);
+            }
+        }
+        
+        function erase() {
+            if (charIndex > 0) {
+                typingTextElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingSpeed);
+            } else {
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, typingSpeed + 1100);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, newTextDelay + 250);
+        });
+        
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const increment = target / speed;
+            
+            const updateCount = () => {
+                const count = +counter.innerText;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 10);
+                } else {
+                    counter.innerText = target + '+';
+                }
+            };
+            
+            updateCount();
+        };
+        
+        // Progress Bars Animation
+        const animateProgressBars = () => {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = width + '%';
+                }, 100);
+            });
+        };
+        
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animate counters
+                    if (entry.target.querySelector('.counter')) {
+                        const countersInView = entry.target.querySelectorAll('.counter');
+                        countersInView.forEach(counter => {
+                            if (!counter.classList.contains('animated')) {
+                                counter.classList.add('animated');
+                                animateCounter(counter);
+                            }
+                        });
+                    }
+                    
+                    // Animate progress bars
+                    if (entry.target.querySelector('.progress-bar')) {
+                        const barsInView = entry.target.querySelectorAll('.progress-bar');
+                        barsInView.forEach(bar => {
+                            if (!bar.classList.contains('animated')) {
+                                bar.classList.add('animated');
+                                const width = bar.getAttribute('data-width');
+                                setTimeout(() => {
+                                    bar.style.width = width + '%';
+                                }, 100);
+                            }
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all fade-in-up elements
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Form Submission with EmailJS
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span><i class="fas fa-spinner fa-spin ml-2"></i>جاري الإرسال...</span>';
+            submitBtn.disabled = true;
+            
+            // Simulate sending email (replace with actual email service)
+            setTimeout(() => {
+                // Show success message
+                formMessage.classList.remove('hidden');
+                formMessage.className = 'mt-6 p-4 rounded-xl bg-green-100 border-2 border-green-500 text-green-700 shadow-lg';
+                formMessage.innerHTML = '<i class="fas fa-check-circle ml-2"></i> تم إرسال رسالتك بنجاح! سأتواصل معك قريبًا.';
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.particle');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+        
+        // Add hover effect to cards
+        document.querySelectorAll('.card-3d').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.02)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
