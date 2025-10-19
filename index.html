@@ -3,27 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="محمد محمود - مطور ويب ومهندس معلوماتية متخصص في تطوير الباك إند">
-    <title>محمد محمود - مطور Back-End | مهندس معلوماتية</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>محمد محمود - مطور Back-End | PHP & MySQL | دمشق</title>
+    <meta name="description" content="محمد محمود - مطور ويب متخصص في PHP و MySQL. طالب هندسة معلوماتية من دمشق. أقدم خدمات تطوير المواقع والتدريب البرمجي.">
+    <meta name="keywords" content="محمد محمود, مطور PHP, مطور MySQL, مطور Back-End, هندسة معلوماتية, دمشق, تطوير ويب, دورات برمجة">
+    <meta name="author" content="محمد محمود">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="محمد محمود - مطور Back-End | PHP & MySQL">
+    <meta property="og:description" content="مطور ويب متخصص في تقنيات الباك إند. خبرة في PHP و MySQL مع مشاريع تعليمية ونظم إدارة محتوى.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://drmuhammad.github.io">
+    <meta property="og:image" content="https://drmuhammad.github.io/assets/profile.jpg">
+    <meta property="og:locale" content="ar_SA">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="محمد محمود - مطور Back-End">
+    <meta name="twitter:description" content="مطور ويب متخصص في PHP و MySQL. أساعد الأفراد والشركات في تحقيق أهدافهم التقنية.">
+    <meta name="twitter:image" content="https://drmuhammad.github.io/assets/profile.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://drmuhammad.github.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "محمد محمود",
+        "jobTitle": "مطور Back-End",
+        "description": "مطور ويب متخصص في PHP و MySQL، طالب هندسة معلوماتية",
+        "url": "https://drmuhammad.github.io",
+        "email": "mhmdmhmudm12@gmail.com",
+        "telephone": "+963996777354",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "دمشق",
+            "addressRegion": "المزة",
+            "addressCountry": "SY"
+        },
+        "alumniOf": {
+            "@type": "Organization",
+            "name": "الجامعة الافتراضية السورية"
+        },
+        "knowsAbout": ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Web Development", "MVC", "REST API"],
+        "sameAs": [
+            "https://github.com/drmuhammad",
+            "https://linkedin.com/in/muhammad-mahmoud"
+        ]
+    }
+    </script>
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb',
+                        primary: '#1e3a8a',
                         secondary: '#7c3aed',
-                        accent: '#dc2626'
-                    },
-                    fontFamily: {
-                        cairo: ['Cairo', 'sans-serif']
+                        accent: '#ec4899',
+                        bgLight: '#f8fafc'
                     }
                 }
             }
@@ -32,286 +84,515 @@
     
     <style>
         * {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Tajawal', 'Cairo', sans-serif;
         }
         
         html {
             scroll-behavior: smooth;
         }
         
-        /* تحسين الأداء - تقليل الأنيميشن */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
+        body {
+            overflow-x: hidden;
         }
         
-        /* خلفية متحركة مبسطة */
-        .hero-bg {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #dc2626 100%);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+        /* Enhanced Animated Background */
+        .animated-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #ec4899 100%);
+            background-size: 200% 200%;
+            animation: gradientFlow 15s ease infinite;
+            position: relative;
+            overflow: hidden;
         }
         
-        @keyframes gradient {
+        @keyframes gradientFlow {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
         
-        /* نص متدرج */
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: bgMove 25s linear infinite;
+        }
+        
+        @keyframes bgMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+        
+        /* Floating Particles Enhanced */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: floatParticle 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes floatParticle {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+            25% { transform: translate(30px, -30px) scale(1.2); opacity: 0.8; }
+            50% { transform: translate(-20px, -60px) scale(0.9); opacity: 1; }
+            75% { transform: translate(-40px, -30px) scale(1.1); opacity: 0.7; }
+        }
+        
+        /* Gradient Text Enhanced */
         .gradient-text {
-            background: linear-gradient(135deg, #dc2626, #7c3aed, #2563eb);
+            background: linear-gradient(135deg, #ec4899 0%, #7c3aed 50%, #1e3a8a 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: gradientShift 4s ease infinite;
+            background-size: 300% 300%;
         }
         
-        /* بطاقات ثلاثية الأبعاد مبسطة */
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
         
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        /* Avatar Animation Enhanced */
+        .avatar-container {
+            position: relative;
+            animation: avatarFloat 4s ease-in-out infinite;
         }
         
-        /* شريط التقدم */
-        .progress-bar {
-            transition: width 1.5s ease;
+        @keyframes avatarFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
         }
         
-        /* رابط التنقل */
-        .nav-link {
+        .avatar-ring {
+            position: absolute;
+            border: 3px solid rgba(236, 72, 153, 0.4);
+            border-radius: 50%;
+            animation: pulseRing 2.5s ease-out infinite;
+        }
+        
+        @keyframes pulseRing {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+        
+        /* Upload Button */
+        .upload-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .upload-btn:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+        
+        /* Enhanced Card 3D Effects */
+        .card-3d {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
             position: relative;
         }
         
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            right: 0;
-            width: 0;
-            height: 2px;
-            background: #dc2626;
-            transition: width 0.3s ease;
+        .card-3d:hover {
+            transform: translateY(-20px) rotateX(10deg) rotateY(5deg) scale(1.02);
+            box-shadow: 0 40px 80px rgba(30, 58, 138, 0.25);
         }
         
-        .nav-link:hover::after {
+        .card-3d::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(124, 58, 237, 0.15));
+            opacity: 0;
+            transition: opacity 0.5s;
+            border-radius: inherit;
+        }
+        
+        .card-3d:hover::before {
+            opacity: 1;
+        }
+        
+        /* Service Icon Enhanced */
+        .service-icon {
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .card-3d:hover .service-icon {
+            transform: scale(1.3) rotate(360deg);
+        }
+        
+        /* Progress Bar Enhanced */
+        .progress-bar {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: shimmer 2.5s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        /* Typing Effect Enhanced */
+        .typing-text {
+            display: inline-block;
+        }
+        
+        .typing-text::after {
+            content: '|';
+            animation: blink 1s infinite;
+            font-weight: bold;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        /* Nav Link Enhanced */
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ec4899, #7c3aed, #1e3a8a);
+            transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .nav-link:hover::before {
             width: 100%;
         }
         
-        /* أيقونات اجتماعية */
-        .social-icon {
-            transition: all 0.3s ease;
+        /* Button Enhanced */
+        .btn-enhanced {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
         
-        .social-icon:hover {
-            transform: translateY(-4px) scale(1.1);
+        .btn-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
         }
         
-        /* نموذج الإدخال */
+        .btn-enhanced:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+        
+        .btn-enhanced span {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Scroll Indicator Enhanced */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounceEnhanced 2s infinite;
+        }
+        
+        @keyframes bounceEnhanced {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-15px); }
+            60% { transform: translateX(-50%) translateY(-8px); }
+        }
+        
+        /* Form Enhanced */
+        .form-input {
+            transition: all 0.4s;
+            position: relative;
+        }
+        
         .form-input:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+            border-color: #ec4899;
         }
         
-        /* ظهور تدريجي */
-        .fade-in {
+        /* Fade In Up Enhanced */
+        .fade-in-up {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
-        .fade-in.visible {
+        .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
         
-        /* القائمة المحمولة */
+        /* Social Icon Enhanced */
+        .social-icon {
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-8px) rotate(360deg) scale(1.15);
+        }
+        
+        /* Glow Effect Enhanced */
+        .glow {
+            animation: glowPulse 2.5s ease-in-out infinite;
+        }
+        
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.6); }
+            50% { box-shadow: 0 0 50px rgba(236, 72, 153, 1), 0 0 80px rgba(124, 58, 237, 0.8); }
+        }
+        
+        /* Mobile Menu Enhanced */
         .mobile-menu {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
+            transition: max-height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
         .mobile-menu.active {
-            max-height: 500px;
+            max-height: 600px;
         }
         
-        /* شريط التنقل عند التمرير */
-        nav.scrolled {
-            background: rgba(255, 255, 255, 0.95) !important;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+        /* Stats Counter Enhanced */
+        .stat-card {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(124, 58, 237, 0.1));
+            border: 2px solid transparent;
+            transition: all 0.4s;
         }
         
-        /* تحسين الأداء على الأجهزة المحمولة */
-        @media (max-width: 768px) {
-            .hero-bg {
-                animation: none;
-                background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            }
-            
-            .card-hover:hover {
-                transform: translateY(-4px);
-            }
+        .stat-card:hover {
+            border-color: #ec4899;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(124, 58, 237, 0.2));
         }
         
-        /* مؤشر التحميل */
-        .spinner {
-            border: 3px solid #f3f4f6;
-            border-top: 3px solid #dc2626;
+        /* Timeline Styles */
+        .timeline-item {
+            position: relative;
+            padding-right: 40px;
+            border-right: 3px solid #ec4899;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 0;
+            width: 15px;
+            height: 15px;
             border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            animation: spin 1s linear infinite;
+            background: #ec4899;
+            box-shadow: 0 0 0 4px #fff, 0 0 0 8px #ec4899;
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        /* Navbar Enhanced */
+        nav {
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        /* Portfolio Grid */
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.9), rgba(124, 58, 237, 0.9));
+            opacity: 0;
+            transition: opacity 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-bgLight">
     
-    <!-- شريط التنقل -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm shadow-md z-50 transition-all">
-        <div class="container mx-auto px-4 py-3">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg z-50 transition-all">
+        <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-                <a href="#home" class="flex items-center hover:scale-105 transition">
-                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">MM</span>
+                <a href="#home" class="flex items-center transform hover:scale-105 transition">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
+                        <span class="text-white font-bold text-xl">MM</span>
                     </div>
-                    <span class="mr-2 text-primary font-bold text-lg hidden sm:inline">محمد محمود</span>
                 </a>
                 
-                <ul class="hidden md:flex space-x-reverse space-x-6 items-center">
-                    <li><a href="#about" class="nav-link text-gray-700 hover:text-primary transition font-semibold">عني</a></li>
-                    <li><a href="#skills" class="nav-link text-gray-700 hover:text-primary transition font-semibold">المهارات</a></li>
-                    <li><a href="#projects" class="nav-link text-gray-700 hover:text-primary transition font-semibold">المشاريع</a></li>
-                    <li><a href="#contact" class="nav-link text-gray-700 hover:text-primary transition font-semibold">تواصل</a></li>
+                <ul class="hidden md:flex space-x-reverse space-x-8 items-center">
+                    <li><a href="#about" class="nav-link text-primary hover:text-accent transition font-semibold">عني</a></li>
+                    <li><a href="#skills" class="nav-link text-primary hover:text-accent transition font-semibold">المهارات</a></li>
+                    <li><a href="#projects" class="nav-link text-primary hover:text-accent transition font-semibold">المشاريع</a></li>
+                    <li><a href="#education" class="nav-link text-primary hover:text-accent transition font-semibold">التعليم</a></li>
+                    <li><a href="#contact" class="nav-link text-primary hover:text-accent transition font-semibold">تواصل</a></li>
                 </ul>
                 
-                <button id="mobile-menu-btn" class="md:hidden text-primary text-xl">
+                <button id="mobile-menu-btn" class="md:hidden text-primary text-2xl">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
             
             <div id="mobile-menu" class="mobile-menu md:hidden">
-                <ul class="py-4 space-y-2">
-                    <li><a href="#about" class="block text-gray-700 hover:text-primary transition py-2 px-3 rounded hover:bg-gray-100">عني</a></li>
-                    <li><a href="#skills" class="block text-gray-700 hover:text-primary transition py-2 px-3 rounded hover:bg-gray-100">المهارات</a></li>
-                    <li><a href="#projects" class="block text-gray-700 hover:text-primary transition py-2 px-3 rounded hover:bg-gray-100">المشاريع</a></li>
-                    <li><a href="#contact" class="block text-gray-700 hover:text-primary transition py-2 px-3 rounded hover:bg-gray-100">تواصل</a></li>
+                <ul class="py-4 space-y-3">
+                    <li><a href="#about" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">عني</a></li>
+                    <li><a href="#skills" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">المهارات</a></li>
+                    <li><a href="#projects" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">المشاريع</a></li>
+                    <li><a href="#education" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">التعليم</a></li>
+                    <li><a href="#contact" class="block text-primary hover:text-accent transition py-2 px-4 rounded hover:bg-bgLight">تواصل</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     
-    <!-- قسم البطل -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-16 relative overflow-hidden">
+    <!-- Hero Section -->
+    <section id="home" class="animated-bg min-h-screen flex items-center pt-20 relative">
+        <div class="particle" style="width: 12px; height: 12px; top: 15%; left: 10%; background: rgba(236, 72, 153, 0.4); animation-delay: 0s;"></div>
+        <div class="particle" style="width: 18px; height: 18px; top: 65%; left: 85%; background: rgba(124, 58, 237, 0.4); animation-delay: 1s;"></div>
+        <div class="particle" style="width: 10px; height: 10px; top: 35%; left: 75%; background: rgba(30, 58, 138, 0.4); animation-delay: 2s;"></div>
+        <div class="particle" style="width: 15px; height: 15px; top: 75%; left: 25%; background: rgba(236, 72, 153, 0.5); animation-delay: 3s;"></div>
+        <div class="particle" style="width: 8px; height: 8px; top: 50%; left: 15%; background: rgba(124, 58, 237, 0.5); animation-delay: 1.5s;"></div>
+        
         <div class="container mx-auto px-4 relative z-10">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-                <div class="flex-1 text-white text-center md:text-right fade-in">
-                    <h2 class="text-lg md:text-xl mb-3 text-red-200 font-semibold">مرحباً، أنا</h2>
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">محمد محمود</h1>
-                    <div class="text-xl md:text-2xl mb-6">
-                        <span id="typing-text" class="font-semibold"></span>
-                        <span class="animate-pulse">|</span>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="flex-1 text-white fade-in-up">
+                    <h2 class="text-xl md:text-2xl mb-4 text-accent font-semibold">مرحبًا، أنا</h2>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text drop-shadow-2xl">محمد محمود</h1>
+                    <div class="text-2xl md:text-3xl mb-8 h-12">
+                        <span id="typing-text" class="typing-text text-white font-semibold drop-shadow-lg"></span>
                     </div>
-                    <p class="text-base md:text-lg mb-8 leading-relaxed opacity-95 max-w-2xl mx-auto md:mx-0">
-                        مطور Back-End مبتدئ وطالب هندسة معلوماتية في الجامعة الافتراضية السورية.
-                        متخصص في PHP وMySQL مع خبرة عملية في تطوير المواقع التعليمية وأنظمة إدارة المحتوى.
+                    <p class="text-lg md:text-xl mb-8 leading-relaxed opacity-95 drop-shadow-lg">
+                        مطور ويب مهتم بتقنيات الباك إند، ولدي خبرة عملية في PHP و MySQL مع أساسيات جيدة في HTML و CSS و JavaScript. 
+                        أتميز بالدقة والالتزام والرغبة في التطور المستمر.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-lg font-bold transition transform hover:scale-105 shadow-lg">
-                            <i class="fas fa-envelope ml-2"></i>تواصل معي
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="btn-enhanced bg-gradient-to-r from-accent via-secondary to-primary hover:from-accent hover:to-secondary text-white px-8 py-4 rounded-xl font-bold transition transform hover:scale-105 text-center glow shadow-2xl">
+                            <span><i class="fas fa-envelope ml-2"></i>تواصل معي</span>
                         </a>
-                        <a href="#projects" class="bg-white/20 backdrop-blur-sm border-2 border-white hover:bg-white hover:text-primary text-white px-6 py-3 rounded-lg font-bold transition">
-                            <i class="fas fa-code ml-2"></i>مشاريعي
+                        <a href="https://github.com/drmuhammad" target="_blank" class="btn-enhanced bg-white/20 backdrop-blur-md border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-4 rounded-xl font-bold transition text-center shadow-xl">
+                            <span><i class="fab fa-github ml-2"></i>GitHub</span>
                         </a>
                     </div>
                 </div>
                 
-                <div class="flex-1 flex justify-center fade-in">
-                    <div class="relative">
-                        <div class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-white/20 backdrop-blur-sm p-1 shadow-2xl">
-                            <div class="w-full h-full rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden">
-                                <i class="fas fa-user text-7xl md:text-8xl text-gray-400"></i>
+                <div class="flex-1 flex justify-center">
+                    <div class="avatar-container relative">
+                        <div class="avatar-ring" style="width: 300px; height: 300px; top: -15px; left: -15px; animation-delay: 0s;"></div>
+                        <div class="avatar-ring" style="width: 300px; height: 300px; top: -15px; left: -15px; animation-delay: 0.8s;"></div>
+                        <div class="avatar-ring" style="width: 300px; height: 300px; top: -15px; left: -15px; animation-delay: 1.6s;"></div>
+                        <div class="relative">
+                            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-accent via-secondary to-primary p-2 shadow-2xl">
+                                <div id="avatar-display" class="w-full h-full rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">
+                                    <i class="fas fa-user text-8xl text-gray-400"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="absolute -bottom-2 -left-2 bg-accent text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-xl">
-                            <i class="fas fa-code"></i>
+                            <input type="file" id="avatar-input" accept="image/*" class="hidden">
+                            <div class="upload-btn absolute -bottom-4 -right-4 bg-gradient-to-br from-accent to-secondary text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl shadow-2xl glow" onclick="document.getElementById('avatar-input').click()">
+                                <i class="fas fa-camera"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down text-white text-2xl drop-shadow-lg"></i>
+        </div>
     </section>
     
-    <!-- قسم عني -->
-    <section id="about" class="py-16 md:py-20 bg-white">
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-3 text-primary fade-in">نبذة عني</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-10"></div>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">نبذة مختصرة</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
             
             <div class="max-w-4xl mx-auto">
-                <div class="bg-gradient-to-br from-gray-50 to-white p-6 md:p-10 rounded-2xl shadow-lg card-hover fade-in">
-                    <p class="text-base md:text-lg leading-relaxed text-gray-700 mb-4">
-                        أنا محمد محمود، طالب في السنة الثالثة بكلية الهندسة المعلوماتية في الجامعة الافتراضية السورية، ومطور Back-End مبتدئ. 
-                        لدي شغف كبير بتطوير الويب وأسعى دائماً لتعلم تقنيات جديدة وتحسين مهاراتي.
+                <div class="bg-gradient-to-br from-bgLight to-white p-8 md:p-12 rounded-3xl shadow-2xl card-3d fade-in-up border-2 border-transparent hover:border-accent/30">
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">
+                        مطور ويب مهتم بتقنيات الباك إند، ولدي خبرة عملية في PHP و MySQL مع أساسيات جيدة في HTML و CSS و JavaScript. 
+                        أتميز بالدقة والالتزام والرغبة في التطور المستمر، وأسعى لاكتساب خبرة عملية في بيئة عمل احترافية والمساهمة في تطوير المشاريع التقنية.
                     </p>
-                    <p class="text-base md:text-lg leading-relaxed text-gray-700 mb-4">
-                        أتميز بالدقة والالتزام والرغبة في التطور المستمر. لدي خبرة عملية في بناء مواقع تعليمية وأنظمة إدارة محتوى باستخدام PHP وMySQL، 
-                        مع أساسيات قوية في HTML وCSS وJavaScript.
-                    </p>
-                    <p class="text-base md:text-lg leading-relaxed text-gray-700">
-                        أسعى للحصول على فرصة عملية في مجال تطوير الويب، أطور من خلالها مهاراتي التقنية وأساهم في تحقيق أهداف المؤسسة التي أنتمي إليها.
-                    </p>
-                </div>
-                
-                <!-- معلومات شخصية -->
-                <div class="grid sm:grid-cols-2 gap-4 mt-8">
-                    <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-map-marker-alt text-accent text-2xl ml-3"></i>
+                    <div class="grid md:grid-cols-2 gap-6 mt-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-accent text-2xl"></i>
                             <div>
-                                <h4 class="font-bold text-gray-800">الموقع</h4>
-                                <p class="text-gray-600">دمشق - المزة</p>
+                                <p class="text-sm text-gray-500">الموقع</p>
+                                <p class="font-semibold text-gray-800">دمشق - المزة</p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-graduation-cap text-secondary text-2xl ml-3"></i>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-graduation-cap text-secondary text-2xl"></i>
                             <div>
-                                <h4 class="font-bold text-gray-800">التعليم</h4>
-                                <p class="text-gray-600">هندسة معلوماتية - السنة الثالثة</p>
+                                <p class="text-sm text-gray-500">التعليم</p>
+                                <p class="font-semibold text-gray-800">هندسة معلوماتية - السنة الثالثة</p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-briefcase text-primary text-2xl ml-3"></i>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone text-primary text-2xl"></i>
                             <div>
-                                <h4 class="font-bold text-gray-800">التخصص</h4>
-                                <p class="text-gray-600">مطور Back-End</p>
+                                <p class="text-sm text-gray-500">الهاتف</p>
+                                <a href="tel:0996777354" class="font-semibold text-gray-800 hover:text-primary">0996777354</a>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
-                        <div class="flex items-center mb-3">
-                            <i class="fas fa-language text-accent text-2xl ml-3"></i>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-accent text-2xl"></i>
                             <div>
-                                <h4 class="font-bold text-gray-800">اللغات</h4>
-                                <p class="text-gray-600">العربية (الأم) - الإنجليزية (جيدة)</p>
+                                <p class="text-sm text-gray-500">البريد الإلكتروني</p>
+                                <a href="mailto:mhmdmhmudm12@gmail.com" class="font-semibold text-gray-800 hover:text-accent text-sm">mhmdmhmudm12@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -320,137 +601,127 @@
         </div>
     </section>
     
-    <!-- قسم المهارات -->
-    <section id="skills" class="py-16 md:py-20 bg-gray-50">
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-br from-bgLight to-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-3 text-primary fade-in">المهارات</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-10"></div>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">المهارات</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
             
             <div class="max-w-5xl mx-auto">
-                <!-- المهارات التقنية -->
-                <div class="mb-12 fade-in">
-                    <h3 class="text-2xl font-bold text-primary mb-6 flex items-center justify-center md:justify-start">
-                        <i class="fas fa-code text-accent ml-3"></i>
-                        المهارات التقنية
-                    </h3>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <!-- PHP -->
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-gray-800">PHP (البرمجة الإجرائية ومبادئ MVC)</span>
-                                <span class="text-primary font-bold">85%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="progress-bar bg-gradient-to-r from-primary to-secondary h-3 rounded-full" style="width: 0%" data-width="85"></div>
-                            </div>
-                        </div>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="fade-in-up">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-8 flex items-center">
+                            <i class="fas fa-code text-accent ml-3"></i>
+                            المهارات التقنية
+                        </h3>
                         
-                        <!-- MySQL -->
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-gray-800">MySQL (قواعد البيانات)</span>
-                                <span class="text-secondary font-bold">80%</span>
+                        <div class="space-y-6">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">PHP (البرمجة الإجرائية و MVC)</span>
+                                    <span class="text-accent font-bold text-lg">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-accent via-secondary to-accent h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="85"></div>
+                                </div>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="progress-bar bg-gradient-to-r from-secondary to-accent h-3 rounded-full" style="width: 0%" data-width="80"></div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">MySQL (قواعد البيانات)</span>
+                                    <span class="text-primary font-bold text-lg">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-primary via-accent to-primary h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="80"></div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <!-- HTML & CSS -->
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-gray-800">HTML5 & CSS3</span>
-                                <span class="text-accent font-bold">90%</span>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">HTML5 & CSS3</span>
+                                    <span class="text-secondary font-bold text-lg">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-secondary to-accent h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="90"></div>
+                                </div>
                             </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="progress-bar bg-gradient-to-r from-accent to-primary h-3 rounded-full" style="width: 0%" data-width="90"></div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">JavaScript (أساسيات)</span>
+                                    <span class="text-accent font-bold text-lg">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-accent to-primary h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="75"></div>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <!-- JavaScript -->
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-gray-800">JavaScript (أساسيات)</span>
-                                <span class="text-primary font-bold">70%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-3">
-                                <div class="progress-bar bg-gradient-to-r from-primary to-secondary h-3 rounded-full" style="width: 0%" data-width="70"></div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-3">
+                                    <span class="font-semibold text-gray-800 text-lg">Git, VS Code, XAMPP</span>
+                                    <span class="text-primary font-bold text-lg">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden shadow-inner">
+                                    <div class="progress-bar bg-gradient-to-r from-primary via-secondary to-accent h-4 rounded-full transition-all duration-1500" style="width: 0%" data-width="70"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- أدوات ومفاهيم -->
-                    <div class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">
-                            <i class="fab fa-git-alt text-3xl text-orange-500 mb-2"></i>
-                            <p class="font-semibold text-gray-800">Git</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">
-                            <i class="fas fa-code text-3xl text-blue-600 mb-2"></i>
-                            <p class="font-semibold text-gray-800">VS Code</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">
-                            <i class="fas fa-server text-3xl text-purple-600 mb-2"></i>
-                            <p class="font-semibold text-gray-800">XAMPP</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">
-                            <i class="fas fa-plug text-3xl text-green-600 mb-2"></i>
-                            <p class="font-semibold text-gray-800">REST API</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">
-                            <i class="fas fa-database text-3xl text-red-600 mb-2"></i>
-                            <p class="font-semibold text-gray-800">CRUD</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md text-center card-hover">
-                            <i class="fas fa-lock text-3xl text-indigo-600 mb-2"></i>
-                            <p class="font-semibold text-gray-800">Authentication</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- المهارات الشخصية -->
-                <div class="fade-in">
-                    <h3 class="text-2xl font-bold text-primary mb-6 flex items-center justify-center md:justify-start">
-                        <i class="fas fa-users text-secondary ml-3"></i>
-                        المهارات الشخصية
-                    </h3>
-                    
-                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <i class="fas fa-comments text-3xl text-primary mb-3"></i>
-                            <h4 class="font-bold text-gray-800 mb-2">اللباقة في التواصل</h4>
-                            <p class="text-sm text-gray-600">مع الزملاء والعملاء</p>
+                    <div class="fade-in-up" style="transition-delay: 0.2s;">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-8 flex items-center">
+                            <i class="fas fa-star text-secondary ml-3"></i>
+                            المهارات الشخصية
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-accent text-xl"></i>
+                                    <span class="text-gray-700 font-semibold">اللباقة في التواصل مع الزملاء والعملاء</span>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-secondary text-xl"></i>
+                                    <span class="text-gray-700 font-semibold">الدقة والانتباه للتفاصيل</span>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-primary text-xl"></i>
+                                    <span class="text-gray-700 font-semibold">الالتزام بالمواعيد وتحمل ضغط العمل</span>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-accent text-xl"></i>
+                                    <span class="text-gray-700 font-semibold">القدرة على العمل ضمن فريق</span>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-secondary text-xl"></i>
+                                    <span class="text-gray-700 font-semibold">التعلم السريع واستيعاب التقنيات الجديدة</span>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <i class="fas fa-crosshairs text-3xl text-accent mb-3"></i>
-                            <h4 class="font-bold text-gray-800 mb-2">الدقة والانتباه</h4>
-                            <p class="text-sm text-gray-600">للتفاصيل الدقيقة</p>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <i class="fas fa-clock text-3xl text-secondary mb-3"></i>
-                            <h4 class="font-bold text-gray-800 mb-2">الالتزام بالمواعيد</h4>
-                            <p class="text-sm text-gray-600">وتحمل ضغط العمل</p>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <i class="fas fa-user-friends text-3xl text-primary mb-3"></i>
-                            <h4 class="font-bold text-gray-800 mb-2">العمل الجماعي</h4>
-                            <p class="text-sm text-gray-600">القدرة على العمل ضمن فريق</p>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <i class="fas fa-brain text-3xl text-accent mb-3"></i>
-                            <h4 class="font-bold text-gray-800 mb-2">التعلم السريع</h4>
-                            <p class="text-sm text-gray-600">استيعاب التقنيات الجديدة</p>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                            <i class="fas fa-chart-line text-3xl text-secondary mb-3"></i>
-                            <h4 class="font-bold text-gray-800 mb-2">التطور المستمر</h4>
-                            <p class="text-sm text-gray-600">الرغبة في التحسين الدائم</p>
+                        <div class="mt-8 bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-xl">
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                                <i class="fas fa-lightbulb text-accent ml-2"></i>
+                                مفاهيم تقنية
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-white rounded-full text-sm font-semibold text-gray-700 shadow">REST API</span>
+                                <span class="px-3 py-1 bg-white rounded-full text-sm font-semibold text-gray-700 shadow">CRUD</span>
+                                <span class="px-3 py-1 bg-white rounded-full text-sm font-semibold text-gray-700 shadow">Authentication</span>
+                                <span class="px-3 py-1 bg-white rounded-full text-sm font-semibold text-gray-700 shadow">MVC</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -458,212 +729,226 @@
         </div>
     </section>
     
-    <!-- قسم المشاريع -->
-    <section id="projects" class="py-16 md:py-20 bg-white">
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-3 text-primary fade-in">مشاريعي</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-10"></div>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">الخبرات والمشاريع</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
             
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <!-- مواقع تعليمية -->
-                <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl shadow-lg card-hover fade-in">
-                    <div class="text-4xl text-primary mb-4">
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gradient-to-br from-bgLight to-white p-8 rounded-3xl shadow-xl card-3d fade-in-up relative overflow-hidden group border-2 border-transparent hover:border-accent/30">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-accent/10 rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="text-6xl text-accent mb-6 service-icon relative z-10">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">مواقع تعليمية</h3>
-                    <p class="text-gray-600 mb-4">
-                        تطوير مواقع تعليمية صغيرة ومتوسطة باستخدام PHP وMySQL مع واجهات تفاعلية
+                    <h3 class="text-2xl font-bold text-primary mb-4 relative z-10">مواقع تعليمية</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                        تطوير مواقع تعليمية صغيرة ومتوسطة باستخدام PHP وMySQL مع واجهات تفاعلية.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">PHP</span>
-                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">MySQL</span>
-                        <span class="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded">HTML/CSS</span>
-                    </div>
+                    <ul class="space-y-2 text-gray-600 relative z-10">
+                        <li class="flex items-center"><i class="fas fa-check text-accent ml-2"></i>PHP & MySQL</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent ml-2"></i>نظام إدارة محتوى</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent ml-2"></i>واجهات تفاعلية</li>
+                    </ul>
                 </div>
                 
-                <!-- نظام تسجيل دخول -->
-                <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-2xl shadow-lg card-hover fade-in">
-                    <div class="text-4xl text-secondary mb-4">
+                <div class="bg-gradient-to-br from-bgLight to-white p-8 rounded-3xl shadow-xl card-3d fade-in-up relative overflow-hidden group border-2 border-transparent hover:border-secondary/30" style="transition-delay: 0.1s;">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-secondary/10 rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="text-6xl text-secondary mb-6 service-icon relative z-10">
                         <i class="fas fa-user-lock"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">نظام تسجيل دخول</h3>
-                    <p class="text-gray-600 mb-4">
-                        إنشاء نظام تسجيل دخول آمن ولوحة تحكم للمستخدمين مع إدارة الصلاحيات
+                    <h3 class="text-2xl font-bold text-primary mb-4 relative z-10">نظام تسجيل دخول</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                        إنشاء نظام authentication كامل مع لوحة تحكم للمستخدمين وإدارة الصلاحيات.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Authentication</span>
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">PHP Sessions</span>
-                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">MySQL</span>
-                    </div>
+                    <ul class="space-y-2 text-gray-600 relative z-10">
+                        <li class="flex items-center"><i class="fas fa-check text-secondary ml-2"></i>Authentication</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary ml-2"></i>لوحة تحكم</li>
+                        <li class="flex items-center"><i class="fas fa-check text-secondary ml-2"></i>إدارة صلاحيات</li>
+                    </ul>
                 </div>
                 
-                <!-- نظام إدارة محتوى -->
-                <div class="bg-gradient-to-br from-red-50 to-white p-6 rounded-2xl shadow-lg card-hover fade-in">
-                    <div class="text-4xl text-accent mb-4">
-                        <i class="fas fa-file-alt"></i>
+                <div class="bg-gradient-to-br from-bgLight to-white p-8 rounded-3xl shadow-xl card-3d fade-in-up relative overflow-hidden group border-2 border-transparent hover:border-primary/30" style="transition-delay: 0.2s;">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-primary/10 rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="text-6xl text-primary mb-6 service-icon relative z-10">
+                        <i class="fas fa-newspaper"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">نظام إدارة محتوى (CMS)</h3>
-                    <p class="text-gray-600 mb-4">
-                        بناء نظام CMS بسيط لعرض وإدارة المقالات والدروس مع لوحة تحكم إدارية
+                    <h3 class="text-2xl font-bold text-primary mb-4 relative z-10">نظام إدارة محتوى</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6 relative z-10">
+                        بناء CMS بسيط لعرض وإدارة المقالات والدروس مع نظام CRUD كامل.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">PHP</span>
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">CRUD</span>
-                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">MySQL</span>
-                    </div>
-                </div>
-                
-                <!-- مشاريع CRUD -->
-                <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-2xl shadow-lg card-hover fade-in">
-                    <div class="text-4xl text-green-600 mb-4">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">مشاريع CRUD</h3>
-                    <p class="text-gray-600 mb-4">
-                        مشاريع تدريبية تشمل عمليات الإنشاء والقراءة والتحديث والحذف للبيانات
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">CRUD Operations</span>
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">PHP</span>
-                        <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">MySQL</span>
-                    </div>
-                </div>
-                
-                <!-- تصميم قواعد بيانات -->
-                <div class="bg-gradient-to-br from-indigo-50 to-white p-6 rounded-2xl shadow-lg card-hover fade-in">
-                    <div class="text-4xl text-indigo-600 mb-4">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">تصميم قواعد البيانات</h3>
-                    <p class="text-gray-600 mb-4">
-                        تصميم وتنفيذ قواعد بيانات علائقية مع استعلامات SQL متقدمة
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Database Design</span>
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">SQL</span>
-                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">MySQL</span>
-                    </div>
-                </div>
-                
-                <!-- نماذج تفاعلية -->
-                <div class="bg-gradient-to-br from-yellow-50 to-white p-6 rounded-2xl shadow-lg card-hover fade-in">
-                    <div class="text-4xl text-yellow-600 mb-4">
-                        <i class="fas fa-wpforms"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">نماذج تفاعلية</h3>
-                    <p class="text-gray-600 mb-4">
-                        إنشاء نماذج تفاعلية مع التحقق من البيانات ومعالجتها في الخادم
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Forms</span>
-                        <span class="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded">Validation</span>
-                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">JavaScript</span>
-                    </div>
+                    <ul class="space-y-2 text-gray-600 relative z-10">
+                        <li class="flex items-center"><i class="fas fa-check text-primary ml-2"></i>CMS متكامل</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary ml-2"></i>CRUD Operations</li>
+                        <li class="flex items-center"><i class="fas fa-check text-primary ml-2"></i>إدارة المقالات</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- قسم التواصل -->
-    <section id="contact" class="py-16 md:py-20 bg-gray-50">
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gradient-to-br from-bgLight to-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-3 text-primary fade-in">تواصل معي</h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-10"></div>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">التعليم واللغات</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-xl card-3d fade-in-up border-2 border-transparent hover:border-accent/30">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="text-5xl text-accent">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-primary mb-2">الجامعة الافتراضية السورية</h3>
+                                <p class="text-lg text-secondary font-semibold mb-2">كلية الهندسة المعلوماتية</p>
+                                <p class="text-gray-600">السنة الثالثة</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-3xl shadow-xl card-3d fade-in-up border-2 border-transparent hover:border-secondary/30" style="transition-delay: 0.1s;">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fas fa-language text-accent text-3xl"></i>
+                                <h3 class="text-2xl font-bold text-primary">اللغات</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="font-semibold text-gray-800">العربية</span>
+                                        <span class="text-accent font-bold">اللغة الأم</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-3">
+                                        <div class="bg-gradient-to-r from-accent to-secondary h-3 rounded-full" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-2">
+                                        <span class="font-semibold text-gray-800">الإنجليزية</span>
+                                        <span class="text-secondary font-bold">جيدة</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-3">
+                                        <div class="bg-gradient-to-r from-secondary to-primary h-3 rounded-full" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-3xl shadow-xl fade-in-up" style="transition-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold text-primary mb-4 flex items-center">
+                        <i class="fas fa-bullseye text-accent ml-3"></i>
+                        الهدف المهني
+                    </h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        أسعى للحصول على فرصة عملية في مجال تطوير الويب أو خدمة العملاء، أطور من خلالها مهاراتي التقنية وأساهم في تحقيق أهداف المؤسسة التي أنتمي إليها.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary fade-in-up">تواصل معي</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent via-secondary to-primary mx-auto mb-12"></div>
             
             <div class="max-w-5xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- نموذج التواصل -->
-                    <div class="fade-in">
-                        <form id="contact-form" class="space-y-5">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="fade-in-up">
+                        <form id="contact-form" class="space-y-6">
                             <div>
-                                <label for="name" class="block text-gray-700 font-semibold mb-2">الاسم الكامل</label>
-                                <input type="text" id="name" required class="form-input w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary transition" placeholder="أدخل اسمك الكامل">
+                                <label for="name" class="block text-gray-700 font-semibold mb-2 text-lg">الاسم الكامل</label>
+                                <input type="text" id="name" required class="form-input w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-accent transition" placeholder="أدخل اسمك الكامل">
                             </div>
                             
                             <div>
-                                <label for="email" class="block text-gray-700 font-semibold mb-2">البريد الإلكتروني</label>
-                                <input type="email" id="email" required class="form-input w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary transition" placeholder="your@email.com">
+                                <label for="email" class="block text-gray-700 font-semibold mb-2 text-lg">البريد الإلكتروني</label>
+                                <input type="email" id="email" required class="form-input w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-accent transition" placeholder="your@email.com">
                             </div>
                             
                             <div>
-                                <label for="subject" class="block text-gray-700 font-semibold mb-2">الموضوع</label>
-                                <input type="text" id="subject" required class="form-input w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary transition" placeholder="موضوع الرسالة">
+                                <label for="subject" class="block text-gray-700 font-semibold mb-2 text-lg">الموضوع</label>
+                                <input type="text" id="subject" required class="form-input w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-accent transition" placeholder="موضوع الرسالة">
                             </div>
                             
                             <div>
-                                <label for="message" class="block text-gray-700 font-semibold mb-2">الرسالة</label>
-                                <textarea id="message" rows="4" required class="form-input w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary transition resize-none" placeholder="اكتب رسالتك هنا..."></textarea>
+                                <label for="message" class="block text-gray-700 font-semibold mb-2 text-lg">الرسالة</label>
+                                <textarea id="message" rows="5" required class="form-input w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-accent transition resize-none" placeholder="اكتب رسالتك هنا..."></textarea>
                             </div>
                             
-                            <button type="submit" class="w-full bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white px-6 py-3 rounded-lg font-bold transition transform hover:scale-105 shadow-lg">
-                                <i class="fas fa-paper-plane ml-2"></i>إرسال الرسالة
+                            <button type="submit" class="btn-enhanced w-full bg-gradient-to-r from-accent via-secondary to-primary hover:from-accent hover:to-primary text-white px-8 py-4 rounded-xl font-bold transition transform hover:scale-105 text-lg shadow-xl glow">
+                                <span><i class="fas fa-paper-plane ml-2"></i>إرسال الرسالة</span>
                             </button>
                         </form>
                         
-                        <div id="form-message" class="hidden mt-4 p-4 rounded-lg"></div>
+                        <div id="form-message" class="hidden mt-6 p-4 rounded-xl"></div>
                     </div>
                     
-                    <!-- معلومات التواصل -->
-                    <div class="fade-in">
-                        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg h-full">
-                            <h3 class="text-2xl font-bold text-primary mb-6">معلومات التواصل</h3>
+                    <div class="fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="bg-gradient-to-br from-white to-bgLight p-8 md:p-10 rounded-3xl shadow-2xl h-full border-2 border-transparent hover:border-accent/20 transition">
+                            <h3 class="text-3xl font-bold text-primary mb-8">معلومات التواصل</h3>
                             
-                            <div class="space-y-5">
+                            <div class="space-y-6">
                                 <div class="flex items-start group">
-                                    <div class="text-accent text-2xl ml-4 mt-1 group-hover:scale-110 transition">
+                                    <div class="text-accent text-3xl ml-4 mt-1 group-hover:scale-110 transition">
                                         <i class="fas fa-envelope"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-gray-800 mb-1">البريد الإلكتروني</h4>
+                                        <h4 class="font-bold text-gray-800 mb-2 text-lg">البريد الإلكتروني</h4>
                                         <a href="mailto:mhmdmhmudm12@gmail.com" class="text-gray-600 hover:text-accent transition">mhmdmhmudm12@gmail.com</a>
                                     </div>
                                 </div>
                                 
                                 <div class="flex items-start group">
-                                    <div class="text-primary text-2xl ml-4 mt-1 group-hover:scale-110 transition">
+                                    <div class="text-secondary text-3xl ml-4 mt-1 group-hover:scale-110 transition">
                                         <i class="fas fa-phone"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-gray-800 mb-1">رقم الهاتف</h4>
-                                        <a href="tel:+963996777354" class="text-gray-600 hover:text-primary transition" dir="ltr">+963 996 777 354</a>
+                                        <h4 class="font-bold text-gray-800 mb-2 text-lg">الهاتف</h4>
+                                        <a href="tel:0996777354" class="text-gray-600 hover:text-secondary transition">0996777354</a>
                                     </div>
                                 </div>
                                 
                                 <div class="flex items-start group">
-                                    <div class="text-secondary text-2xl ml-4 mt-1 group-hover:scale-110 transition">
+                                    <div class="text-primary text-3xl ml-4 mt-1 group-hover:scale-110 transition">
                                         <i class="fas fa-map-marker-alt"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-gray-800 mb-1">الموقع</h4>
+                                        <h4 class="font-bold text-gray-800 mb-2 text-lg">الموقع</h4>
                                         <p class="text-gray-600">دمشق - المزة، سوريا</p>
                                     </div>
                                 </div>
                                 
                                 <div class="flex items-start group">
-                                    <div class="text-accent text-2xl ml-4 mt-1 group-hover:scale-110 transition">
+                                    <div class="text-accent text-3xl ml-4 mt-1 group-hover:scale-110 transition">
                                         <i class="fab fa-github"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-gray-800 mb-1">GitHub</h4>
-                                        <a href="https://github.com/mohammad-mahmoud" target="_blank" class="text-gray-600 hover:text-accent transition">github.com/mohammad-mahmoud</a>
+                                        <h4 class="font-bold text-gray-800 mb-2 text-lg">GitHub</h4>
+                                        <a href="https://github.com/drmuhammad" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-accent transition">github.com/drmuhammad</a>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="mt-8 pt-6 border-t-2 border-gray-200">
-                                <h4 class="font-bold text-gray-800 mb-4 text-lg">تابعني على وسائل التواصل</h4>
-                                <div class="flex gap-3">
-                                    <a href="https://github.com/mohammad-mahmoud" target="_blank" class="social-icon w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 text-white rounded-lg flex items-center justify-center shadow-md">
-                                        <i class="fab fa-github text-xl"></i>
+                            <div class="mt-10 pt-8 border-t-2 border-gray-200">
+                                <h4 class="font-bold text-gray-800 mb-6 text-xl">تابعني على وسائل التواصل</h4>
+                                <div class="flex gap-4">
+                                    <a href="https://github.com/drmuhammad" target="_blank" rel="noopener noreferrer" class="social-icon w-14 h-14 bg-gradient-to-br from-primary to-secondary hover:from-accent hover:to-secondary text-white rounded-2xl flex items-center justify-center shadow-lg" aria-label="GitHub">
+                                        <i class="fab fa-github text-2xl"></i>
                                     </a>
-                                    <a href="https://linkedin.com/in/mohammad-mahmoud" target="_blank" class="social-icon w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-lg flex items-center justify-center shadow-md">
-                                        <i class="fab fa-linkedin text-xl"></i>
+                                    <a href="https://linkedin.com/in/muhammad-mahmoud" target="_blank" rel="noopener noreferrer" class="social-icon w-14 h-14 bg-gradient-to-br from-secondary to-accent hover:from-primary hover:to-accent text-white rounded-2xl flex items-center justify-center shadow-lg" aria-label="LinkedIn">
+                                        <i class="fab fa-linkedin text-2xl"></i>
                                     </a>
-                                    <a href="https://t.me/mohammadmahmoud" target="_blank" class="social-icon w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 text-white rounded-lg flex items-center justify-center shadow-md">
-                                        <i class="fab fa-telegram text-xl"></i>
+                                    <a href="mailto:mhmdmhmudm12@gmail.com" class="social-icon w-14 h-14 bg-gradient-to-br from-accent to-primary hover:from-secondary hover:to-primary text-white rounded-2xl flex items-center justify-center shadow-lg" aria-label="Email">
+                                        <i class="fas fa-envelope text-2xl"></i>
                                     </a>
-                                    <a href="https://wa.me/963996777354" target="_blank" class="social-icon w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 text-white rounded-lg flex items-center justify-center shadow-md">
-                                        <i class="fab fa-whatsapp text-xl"></i>
+                                    <a href="tel:0996777354" class="social-icon w-14 h-14 bg-gradient-to-br from-primary to-accent hover:from-secondary hover:to-accent text-white rounded-2xl flex items-center justify-center shadow-lg" aria-label="Phone">
+                                        <i class="fas fa-phone text-2xl"></i>
                                     </a>
                                 </div>
                             </div>
@@ -674,26 +959,32 @@
         </div>
     </section>
     
-    <!-- التذييل -->
-    <footer class="bg-gradient-to-r from-primary via-secondary to-accent text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary via-secondary to-accent text-white py-12 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute w-64 h-64 bg-white rounded-full -top-32 -right-32 animate-pulse"></div>
+            <div class="absolute w-96 h-96 bg-white rounded-full -bottom-48 -left-48 animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="text-center md:text-right">
-                    <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-3 mx-auto md:mx-0">
-                        <span class="text-white font-bold text-lg">MM</span>
+                    <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4 mx-auto md:mx-0 shadow-xl">
+                        <span class="text-white font-bold text-2xl">MM</span>
                     </div>
+                    <p class="text-gray-200 text-sm">مطور Back-End</p>
                 </div>
                 
                 <div class="text-center">
-                    <p class="text-gray-100 mb-1">
-                        &copy; 2024 محمد محمود - جميع الحقوق محفوظة
+                    <p class="text-gray-100 text-lg mb-2">
+                        &copy; 2025 محمد محمود
                     </p>
                     <p class="text-sm text-gray-200">
-                        صُمم بـ <i class="fas fa-heart text-red-300 mx-1"></i> باستخدام Tailwind CSS
+                        صُمم بـ <i class="fas fa-heart text-accent mx-1 animate-pulse"></i> باستخدام التقنيات الحديثة
                     </p>
                 </div>
                 
-                <div class="flex gap-3 text-sm">
+                <div class="flex gap-4">
                     <a href="#home" class="text-gray-200 hover:text-white transition">الرئيسية</a>
                     <span class="text-gray-400">|</span>
                     <a href="#about" class="text-gray-200 hover:text-white transition">عني</a>
@@ -705,7 +996,22 @@
     </footer>
 
     <script>
-        // القائمة المحمولة
+        // Avatar Upload Functionality
+        const avatarInput = document.getElementById('avatar-input');
+        const avatarDisplay = document.getElementById('avatar-display');
+        
+        avatarInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    avatarDisplay.innerHTML = `<img src="${event.target.result}" alt="صورة شخصية" class="w-full h-full object-cover">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -716,7 +1022,7 @@
             icon.classList.toggle('fa-times');
         });
         
-        // إغلاق القائمة عند النقر على رابط
+        // Close mobile menu when clicking on a link
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
@@ -726,8 +1032,8 @@
             });
         });
         
-        // تأثير الكتابة
-        const texts = ['مطور Back-End', 'مهندس معلوماتية', 'مطور PHP & MySQL', 'طالب جامعي'];
+        // Typing Animation
+        const texts = ['مطور Back-End', 'متخصص PHP & MySQL', 'طالب هندسة معلوماتية', 'مطور ويب محترف'];
         let textIndex = 0;
         let charIndex = 0;
         const typingSpeed = 100;
@@ -752,18 +1058,29 @@
                 setTimeout(erase, erasingSpeed);
             } else {
                 textIndex = (textIndex + 1) % texts.length;
-                setTimeout(type, typingSpeed + 500);
+                setTimeout(type, typingSpeed + 1100);
             }
         }
         
         document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(type, newTextDelay);
+            setTimeout(type, newTextDelay + 250);
         });
         
-        // تأثير الظهور عند التمرير
+        // Progress Bars Animation
+        const animateProgressBars = () => {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = width + '%';
+                }, 100);
+            });
+        };
+        
+        // Intersection Observer for Animations
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
         };
         
         const observer = new IntersectionObserver((entries) => {
@@ -771,16 +1088,16 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     
-                    // تحريك أشرطة التقدم
+                    // Animate progress bars
                     if (entry.target.querySelector('.progress-bar')) {
-                        const bars = entry.target.querySelectorAll('.progress-bar');
-                        bars.forEach(bar => {
+                        const barsInView = entry.target.querySelectorAll('.progress-bar');
+                        barsInView.forEach(bar => {
                             if (!bar.classList.contains('animated')) {
                                 bar.classList.add('animated');
                                 const width = bar.getAttribute('data-width');
                                 setTimeout(() => {
                                     bar.style.width = width + '%';
-                                }, 200);
+                                }, 100);
                             }
                         });
                     }
@@ -788,12 +1105,12 @@
             });
         }, observerOptions);
         
-        // مراقبة جميع العناصر
-        document.querySelectorAll('.fade-in').forEach(el => {
+        // Observe all fade-in-up elements
+        document.querySelectorAll('.fade-in-up').forEach(el => {
             observer.observe(el);
         });
         
-        // تمرير سلس للروابط
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -807,57 +1124,91 @@
             });
         });
         
-        // تأثير شريط التنقل عند التمرير
-        const navbar = document.getElementById('navbar');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-        
-        // إرسال النموذج
+        // Form Submission
         const contactForm = document.getElementById('contact-form');
         const formMessage = document.getElementById('form-message');
         
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Show loading state
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
-            // حالة التحميل
-            submitBtn.innerHTML = '<div class="spinner inline-block ml-2"></div> جاري الإرسال...';
+            submitBtn.innerHTML = '<span><i class="fas fa-spinner fa-spin ml-2"></i>جاري الإرسال...</span>';
             submitBtn.disabled = true;
             
-            // محاكاة الإرسال
+            // Simulate sending email (replace with actual email service like EmailJS or FormSubmit)
             setTimeout(() => {
+                // Show success message
                 formMessage.classList.remove('hidden');
-                formMessage.className = 'mt-4 p-4 rounded-lg bg-green-100 border-2 border-green-500 text-green-700';
-                formMessage.innerHTML = '<i class="fas fa-check-circle ml-2"></i> تم إرسال رسالتك بنجاح! سأتواصل معك قريباً.';
+                formMessage.className = 'mt-6 p-4 rounded-xl bg-green-100 border-2 border-green-500 text-green-700 shadow-lg';
+                formMessage.innerHTML = '<i class="fas fa-check-circle ml-2"></i> تم إرسال رسالتك بنجاح! سأتواصل معك قريبًا.';
                 
+                // Reset form
                 contactForm.reset();
+                
+                // Reset button
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
                 
+                // Hide message after 5 seconds
                 setTimeout(() => {
                     formMessage.classList.add('hidden');
                 }, 5000);
             }, 1500);
         });
         
-        // تحسين الأداء - تقليل تكرار الأحداث
-        let ticking = false;
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
         
         window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    ticking = false;
-                });
-                ticking = true;
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.particle');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+        
+        // Add hover effect to cards
+        document.querySelectorAll('.card-3d').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.02)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+            });
         });
     </script>
 </body>
